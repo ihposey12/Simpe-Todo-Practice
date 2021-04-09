@@ -2,10 +2,12 @@ import React from 'react'
 import styles from './TodoItem.module.css'
 
 class TodoItem extends React.Component {
+//Set State for Editing
     state = {
         editing: false,
     }
 
+//Update by pressing ENTER or ESC
     handleUpdateDone = e => {
         if(e.key === 'Enter' || 'Esc'){
             this.setState({ editing: false })
@@ -13,6 +15,7 @@ class TodoItem extends React.Component {
     }
 
     render() {
+    //Styling(Not ideal for me taste)
         const completedStyle = {
             fontStyle: 'italic',
             color: '#595959',
@@ -20,14 +23,18 @@ class TodoItem extends React.Component {
             textDecoration: 'line-through',
         }
 
+    //Destructured state
         const { completed, id, title } = this.props.todo
 
+    //Switch state of Editing to True(On double click)
         const handleEditing = () => {
             this.setState({
                 editing: true,
             })
         }
 
+    //Sets viewing edit box to empty or none(if state of editing is true)
+    //Sets editing to empty or none(if state of editing is false)
         let viewMode = {}
         let editMode = {}
 

@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Header = () => {
+//Styling
     const headerStyle = {
         padding: '20px 0',
         lineHeight: '1.5rem',

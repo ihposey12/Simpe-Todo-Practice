@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 import '../App.css'
 
 class TodoContainer extends React.Component {
+//Set State for TODOS
     state = {
         todos: [
             {
@@ -26,6 +27,7 @@ class TodoContainer extends React.Component {
         ],
     }
 
+//Handle checkbox change
     handleChange = id => {
         this.setState(prevState => ({
             todos: prevState.todos.map(todo => {
@@ -40,6 +42,7 @@ class TodoContainer extends React.Component {
         }))
     }
 
+//Delete Todo Items
     deleteTodo = id => {
         this.setState({
             todos: [
@@ -50,6 +53,7 @@ class TodoContainer extends React.Component {
         })
     }
 
+//Add Todo Items
     addTodoItem = title => {
         const newTodo = {
             id: uuidv4(),
@@ -61,6 +65,7 @@ class TodoContainer extends React.Component {
         })
     }
 
+//Update Todo Items after Editing
     setUpdate = (updateTitle, id) => {
         this.setState({
             todos: this.state.todos.map(todo => {

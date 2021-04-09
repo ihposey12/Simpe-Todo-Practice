@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 
 class InputTodo extends Component {
+//Set state for input box of adding new todo.
     state = {
         title: ''
     }
 
+//Update text box with what user types
     onChange = e => {
         this.setState({
             [e.target.name]: e.target.value,
         })
     }
 
+//Submits new todo item unless no item is typed
     handleSubmit = e => {
         e.preventDefault()
         if(this.state.title.trim()) {
