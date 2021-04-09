@@ -10,6 +10,7 @@ const TodoList = (props) => {
                     todo={todo}
                     handleChange={props.handleChange}
                     delete={props.delete}
+                    setUpdate={props.setUpdate}
                 />
             ))}
         </ul>
