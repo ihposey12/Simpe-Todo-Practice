@@ -3,6 +3,7 @@ import TodoList from './TodoList'
 import Header from './Header'
 import InputTodo from './InputTodo'
 import { v4 as uuidv4 } from 'uuid'
+import '../App.css'
 
 class TodoContainer extends React.Component {
     state = {
@@ -62,14 +63,16 @@ class TodoContainer extends React.Component {
 
     render() {
         return(
-            <div>
-                <Header />
-                <InputTodo addTodoItem={this.addTodoItem} />
-                <TodoList 
-                    todos={this.state.todos} 
-                    handleChange={this.handleChange} 
-                    delete={this.deleteTodo} 
-                />
+            <div className='container'>
+                <div className='inner'>
+                    <Header />
+                    <InputTodo addTodoItem={this.addTodoItem} />
+                    <TodoList 
+                        todos={this.state.todos} 
+                        handleChange={this.handleChange} 
+                        delete={this.deleteTodo} 
+                    />
+                </div>
             </div>
         )
     }
