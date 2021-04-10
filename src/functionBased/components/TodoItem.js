@@ -11,7 +11,7 @@ const TodoItem = (props) => {
 
 //Update by pressing ENTER or ESC
     const handleUpdatedDone = e => {
-        if(e.key === 'Enter' || 'Esc'){
+        if(e.key === 'Enter'){
             setEditing(false)
         }
     }
