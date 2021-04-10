@@ -63,3 +63,14 @@ body {
     outline: none;
     border: none;
   }
+
+  .input-submit svg {
+    color: darkcyan;
+    font-size: 20px;
+    margin-top: 2px;
+  }
+
+  .trash-icon {
+    color: 'orangered';
+    font-size: '16px';
+  }
